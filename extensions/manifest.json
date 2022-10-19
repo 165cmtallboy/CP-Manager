@@ -1,0 +1,21 @@
+{
+  "name": "CP Manager",
+  "description": "CoursePowerの色々をしてくれるやつ",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://study.ns.kogakuin.ac.jp/lms/homeHoml/doLinkKougi*"],
+      "js": ["fetchExec.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
